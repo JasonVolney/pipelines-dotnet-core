@@ -18,12 +18,9 @@ steps:
     command: 'restore'
     feedsToUse: 'select'
     vstsFeed: 'my-vsts-feed' # A series of numbers and letters
-
 - task: DotNetCoreCLI@2
   inputs:
     command: 'build'
-    arguments: '--configuration $(buildConfiguration)'
-  displayName: 'dotnet build $(buildConfiguration)'
 
 # ...
 # do this after you've built your app, near the end of your pipeline in most cases
